@@ -556,7 +556,7 @@ def determine_base_flags():
             # use xcode-select to search on the right Xcode path
             # XXX use the best SDK available instead of a specific one
             import platform as _platform
-            xcode_dev = getoutput('xcode-select -p').splitlines()[0]
+            xcode_dev = "/Applications/Xcode.app/Contents/Developer"
             sdk_mac_ver = '.'.join(_platform.mac_ver()[0].split('.')[:2])
             print('Xcode detected at {}, and using OS X{} sdk'.format(
                 xcode_dev, sdk_mac_ver))
